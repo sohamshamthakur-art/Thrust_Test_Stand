@@ -1,0 +1,39 @@
+{
+  "version": 1,
+  "author": "Soham Sham Thakur ,",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "board-esp32-devkit-c-v4", "id": "esp", "top": 105.6, "left": 100.84, "attrs": {} },
+    {
+      "type": "wokwi-hx711",
+      "id": "cell1",
+      "top": 116.2,
+      "left": -204.2,
+      "rotate": 180,
+      "attrs": { "type": "5kg" }
+    },
+    {
+      "type": "wokwi-microsd-card",
+      "id": "sd1",
+      "top": 191.57,
+      "left": 311.53,
+      "rotate": 180,
+      "attrs": {}
+    }
+  ],
+  "connections": [
+    [ "esp:TX", "$serialMonitor:RX", "", [] ],
+    [ "esp:RX", "$serialMonitor:TX", "", [] ],
+    [ "cell1:GND", "esp:GND.1", "black", [ "h0", "v77.1" ] ],
+    [ "cell1:DT", "esp:27", "green", [ "h9.6", "v48.5" ] ],
+    [ "cell1:SCK", "esp:26", "blue", [ "h19.2", "v58.4" ] ],
+    [ "cell1:VCC", "esp:5V", "red", [ "h38.4", "v153.6" ] ],
+    [ "sd1:VCC", "esp:5V", "red", [ "h-48", "v143.86", "h-115.2" ] ],
+    [ "esp:GND.2", "sd1:GND", "black", [ "v0", "h9.6", "v76.8" ] ],
+    [ "esp:5", "sd1:CS", "gold", [ "h38.4", "v-57.6", "h9.6" ] ],
+    [ "sd1:DI", "esp:23", "orange", [ "h-48", "v-28.71" ] ],
+    [ "sd1:SCK", "esp:18", "gray", [ "h-38.4", "v19.21" ] ],
+    [ "esp:19", "sd1:DO", "white", [ "h48", "v9.6" ] ]
+  ],
+  "dependencies": {}
+}
