@@ -39,8 +39,8 @@
 
 // --- STA (Station) mode — ESP32 joins your home/lab router ---
 #define WIFI_MODE_STA
-static const char* WIFI_SSID = "Soham 1";
-static const char* WIFI_PASS = "123456789";
+static const char* WIFI_SSID = "___";
+static const char* WIFI_PASS = "___";
 
 // =============================================================================
 // Pin definitions
